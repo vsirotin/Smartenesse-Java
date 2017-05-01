@@ -25,5 +25,4 @@ public class Boiler1 implements IBoiler {
 		if(!powerAvailable)return Optional.empty();
 		return getCupOfWater().map(cupOfWater->cupOfWater.boil());
 	}
-
 }

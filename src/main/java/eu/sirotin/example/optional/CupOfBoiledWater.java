@@ -1,5 +1,3 @@
 package eu.sirotin.example.optional;
 
-public class CupOfBoiledWater {
-
-}
+public class CupOfBoiledWater {}
