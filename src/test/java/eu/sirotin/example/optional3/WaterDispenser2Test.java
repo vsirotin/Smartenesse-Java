@@ -1,14 +1,13 @@
 package eu.sirotin.example.optional3;
 
-import eu.sirotin.example.optional.CupOfWater;
+import static org.junit.Assert.assertNotNull;
+
 import org.junit.Before;
 import org.junit.Test;
 
-import static org.junit.Assert.assertNotNull;
+import eu.sirotin.example.optional.CupOfWater;
 
-/**
- * @author vsirotin
- */
+
 public class WaterDispenser2Test {
     private IWaterDispenser waterDispenser;
 

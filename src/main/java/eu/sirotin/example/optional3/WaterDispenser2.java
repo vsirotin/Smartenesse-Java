@@ -1,20 +1,18 @@
 package eu.sirotin.example.optional3;
 
-import com.sun.istack.internal.Nullable;
-import eu.sirotin.example.optional.CupOfWater;
-
 import java.util.Optional;
 
+import com.sun.istack.internal.Nullable;
 
-/**
- * @author vsirotin
- */
+import eu.sirotin.example.optional.CupOfWater;
+
+
 public class WaterDispenser2 implements IWaterDispenser{
     @Nullable private CupOfWater mainCup;
 
     @Override
-    public void setAvailability(@Nullable CupOfWater firstPortion) {
-        this.mainCup = firstPortion;
+    public void setAvailability(@Nullable CupOfWater rainWater) {
+        this.mainCup = rainWater;
     }
 
     @Override
