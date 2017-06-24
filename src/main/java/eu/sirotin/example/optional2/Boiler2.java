@@ -7,6 +7,10 @@ import eu.sirotin.example.optional.CupOfWater;
 import java.util.Optional;
 
 
+/**
+ * Simulates essential behaviour of water boiler.
+ * The boiler gets cols watter if water available. It get boiled water if cold water and power both available.
+ */
 public class Boiler2 implements IBoiler2 {
 	
 	@Nullable
@@ -28,6 +32,7 @@ public class Boiler2 implements IBoiler2 {
 	@Override
 	public Optional<CupOfBoiledWater> getCupOfBoiledWater() {
 		if(!powerAvailable)return Optional.empty();
-		return getCupOfWater().map(cupOfWater->cupOfWater.boil());
+		return getCupOfWater().map(CupOfWater::boil);
+		//Alternative statement: return getCupOfWater().map(cupOfWater->cupOfWater.boil());
 	}
 }

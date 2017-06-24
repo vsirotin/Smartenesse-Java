@@ -1,11 +1,11 @@
 package eu.sirotin.example.optional6;
 
+import eu.sirotin.example.optional5.IRainWaterCleanerOutput;
+
 import java.util.Optional;
 
-import eu.sirotin.example.optional5.ICleanRainWaterDispenserOutput;
-
-public interface IMixerOutput extends ICleanRainWaterDispenserOutput{
+public interface IMixerOutput extends IRainWaterCleanerOutput {
 	
-	Optional<MixedCleanableRainWater> getMixedWater();
+	Optional<MixedWater> getMixedWater();
 }
 

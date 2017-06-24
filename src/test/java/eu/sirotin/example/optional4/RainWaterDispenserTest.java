@@ -1,18 +1,18 @@
 package eu.sirotin.example.optional4;
 
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
-
 import org.junit.Before;
 import org.junit.Test;
 
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 
-public class RainWaterDispenser1Test {
+
+public class RainWaterDispenserTest {
     private IRainWaterDispenser rainWaterDispenser;
 
     @Before
     public void setUp() throws Exception {
-        rainWaterDispenser = new RainWaterDispenser1();
+        rainWaterDispenser = new RainWaterDispenser();
     }
 
     @Test

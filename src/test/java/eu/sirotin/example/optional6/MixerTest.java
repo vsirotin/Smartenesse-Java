@@ -1,12 +1,11 @@
 package eu.sirotin.example.optional6;
 
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
-
+import eu.sirotin.example.optional4.RainWater;
 import org.junit.Before;
 import org.junit.Test;
 
-import eu.sirotin.example.optional4.RainWater;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 
 
 public class MixerTest {
@@ -35,6 +34,4 @@ public class MixerTest {
         mixer.setAvailability(new RainWater(false));
         assertTrue(mixer.getMixedWater().isPresent());
     }
-    
-  
 }

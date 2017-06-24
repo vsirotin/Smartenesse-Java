@@ -1,38 +1,37 @@
 package eu.sirotin.example.optional5;
 
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
-
+import eu.sirotin.example.optional4.RainWater;
 import org.junit.Before;
 import org.junit.Test;
 
-import eu.sirotin.example.optional4.RainWater;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 
 
-public class CleanRainWaterDispenser1Test {
-    private ICleanRainWaterDispenser rainWaterDispenser;
+public class RainWaterCleanerTest {
+    private IRainWaterCleaner rainWaterDispenser;
 
     @Before
     public void setUp() throws Exception {
-        rainWaterDispenser = new CleanRainWaterDispenser1();
+        rainWaterDispenser = new RainWaterCleaner();
     }
 
     @Test
     public void testRainWaterAvailableAndClean() {
         rainWaterDispenser.setAvailability(new RainWater(true));
-        assertTrue(rainWaterDispenser.getCleanableRainWater().isPresent());
+        assertTrue(rainWaterDispenser.getCleanedWater().isPresent());
     }
     
  
     @Test
     public void testWaterNotAvailable() {
         rainWaterDispenser.setAvailability(null);
-        assertFalse(rainWaterDispenser.getCleanableRainWater().isPresent());
+        assertFalse(rainWaterDispenser.getCleanedWater().isPresent());
     }
     
     @Test
     public void testRainWaterAvailableNotClean() {
         rainWaterDispenser.setAvailability(new RainWater(false));
-        assertTrue(rainWaterDispenser.getCleanableRainWater().isPresent());
+        assertTrue(rainWaterDispenser.getCleanedWater().isPresent());
     }
 }
