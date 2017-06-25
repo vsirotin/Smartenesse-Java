@@ -1,8 +1,6 @@
 package eu.sirotin.example.optional4;
 
-import eu.sirotin.example.optional.CupOfWater;
-
-public class RainWater extends CupOfWater {
+public class RainWater {
 	
 	private final boolean clean;
 	
