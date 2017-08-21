@@ -1,4 +1,4 @@
-package eu.sirotin.example.tuple;
+package eu.sirotin.utils.tuple;
 
 import java.util.Objects;
 

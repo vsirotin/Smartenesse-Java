@@ -1,4 +1,4 @@
-package eu.sirotin.example.result;
+package eu.sirotin.utils.result;
 
 import java.util.function.Consumer;
 
@@ -101,6 +101,5 @@ public abstract class Result<SUCCESS, FAILURE> {
 	public static <SUCCESS, FAILURE> Result<SUCCESS, FAILURE> failure(FAILURE failure){ return new Failure<>(failure);}
 	
 	public static <SUCCESS, FAILURE> Result<SUCCESS, FAILURE> success(SUCCESS success){ return new Success<>(success);}
-
 
 }

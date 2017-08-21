@@ -5,5 +5,5 @@ import eu.sirotin.example.optional.CupOfWater;
 
 public interface IBoilerInput2 {
 	
-	void setAvailability(@Nullable CupOfWater waterAvailable, boolean powerAvailable);
+	void setAvailability(@Nullable CupOfWater water, boolean powerAvailable);
 }
