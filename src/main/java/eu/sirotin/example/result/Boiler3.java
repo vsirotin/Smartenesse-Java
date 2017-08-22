@@ -10,6 +10,7 @@ import eu.sirotin.utils.result.Result;
 /**
  * Simulates essential behaviour of water boiler.
  * The boiler gets cols watter if water available. It get boiled water if cold water and power both available.
+ * Implementation with help of Result-class.
  */
 public class Boiler3 implements IBoiler3 {
 
