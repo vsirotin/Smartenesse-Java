@@ -1,6 +1,6 @@
 package eu.sirotin.example.optional4;
 
-import com.sun.istack.internal.Nullable;
+
 
 import java.util.Optional;
 
@@ -9,10 +9,10 @@ import java.util.Optional;
  * The dispenser get water only if water tank is filles and water is clean.
  */
 public class RainWaterDispenser implements IRainWaterDispenser{
-    @Nullable private RainWater rainWater;
+    private RainWater rainWater;
 
     @Override
-    public void setAvailability(@Nullable RainWater rainWater) {
+    public void setAvailability( RainWater rainWater) {
         this.rainWater = rainWater;
     }
 

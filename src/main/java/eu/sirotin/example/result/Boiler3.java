@@ -1,6 +1,5 @@
 package eu.sirotin.example.result;
 
-import com.sun.istack.internal.Nullable;
 import eu.sirotin.example.optional.CupOfBoiledWater;
 import eu.sirotin.example.optional.CupOfWater;
 import eu.sirotin.utils.result.Result;
@@ -18,13 +17,12 @@ public class Boiler3 implements IBoiler3 {
 	public static final String POWER_NOT_AVAILABLE = "Power not available.";
 	public static final String BOTH_NOT_AVAILABLE = WATER_NOT_AVAILABLE + " " + POWER_NOT_AVAILABLE;
 
-	@Nullable
 	private CupOfWater water;
 	private boolean powerAvailable;
 	
 
 	@Override
-	public void setAvailability(@Nullable CupOfWater water, boolean powerAvailable) {
+	public void setAvailability(CupOfWater water, boolean powerAvailable) {
 		this.water = water;
 		this.powerAvailable = powerAvailable;
 	}

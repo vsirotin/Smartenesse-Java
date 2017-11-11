@@ -1,6 +1,5 @@
 package eu.sirotin.example.optional5;
 
-import com.sun.istack.internal.Nullable;
 import eu.sirotin.example.optional.CupOfWater;
 import eu.sirotin.example.optional4.RainWater;
 
@@ -11,10 +10,10 @@ import java.util.Optional;
  * The cleaner get cleaned water as output if rain watter filled in device.
  */
 public class RainWaterCleaner implements IRainWaterCleaner {
-    @Nullable private RainWater rainWater;
+    private RainWater rainWater;
 
     @Override
-    public void setAvailability(@Nullable RainWater rainWater) {
+    public void setAvailability(RainWater rainWater) {
         this.rainWater = rainWater;
     }
 
