@@ -15,9 +15,11 @@ public class VegetableGardenTest {
 
     private static final String CANNED_FOOD = "Canned food";
     private static final String MY_GARDEN = "My garden";
+    public static final String TOMATO = "Tomato";
+    public static final String CUCUMBER = "Cucumber";
     private  String[] EXPECTED_RESULT;
     private VegetableGarden tomatoGarden;
-    private String source;
+    private String veg;
 
 
     @Before
@@ -62,29 +64,29 @@ public class VegetableGardenTest {
 
     @Test
     public void testOptionalStreamIfPresentOrElse()  {
-        Optional<String> optFilled = Optional.of(MY_GARDEN);
+        Optional<String> optFilled = Optional.of(TOMATO);
         optFilled.ifPresentOrElse(this::setValue, this::setDefault);
 
-        assertEquals(MY_GARDEN, source);
+        assertEquals(TOMATO, veg);
 
         Optional<String> optEmpty  = Optional.empty();
         optEmpty.ifPresentOrElse(this::setValue, this::setDefault);
 
-        assertEquals(CANNED_FOOD, source);
+        assertEquals(CANNED_FOOD, veg);
     }
 
     @Test
     public void testOptionalOr1()  {
         Optional<String> optBed1 = Optional.empty();
-        Optional<String> optBed2 = Optional.of("Tomato");
-        Optional<String> optBed3 = Optional.of("Cucumber");
+        Optional<String> optBed2 = Optional.of(TOMATO);
+        Optional<String> optBed3 = Optional.of(CUCUMBER);
         String res1 = optBed1
                 .or(()->{return optBed2;})
                 .or(()->optBed3)
                 .or(this::getDefault)
                 .get();
 
-        assertEquals(res1, "Tomato");
+        assertEquals(res1, TOMATO);
     }
 
     @Test
@@ -101,8 +103,10 @@ public class VegetableGardenTest {
         assertEquals(res1, CANNED_FOOD);
     }
 
-    private void setValue(String s){source = s;}
-    private void setDefault(){source = CANNED_FOOD;}
+    private void setValue(String s){
+        veg = s;}
+    private void setDefault(){
+        veg = CANNED_FOOD;}
 
     private Optional<? extends String> getDefault(){return Optional.of(CANNED_FOOD);};
 
