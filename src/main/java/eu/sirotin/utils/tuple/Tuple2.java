@@ -9,12 +9,12 @@ import java.util.Objects;
  * @param <B> Type fo second component.
  */
 public class Tuple2<A, B> {
-	public final A _1;
-	public final B _2;
+	public final A a1;
+	public final B a2;
 	
 	public Tuple2(A t, B u) {
-	    _1 = Objects.requireNonNull(t);
-	    _2 = Objects.requireNonNull(u);
+	    a1 = Objects.requireNonNull(t);
+	    a2 = Objects.requireNonNull(u);
 	}
 	
 	@Override
@@ -24,7 +24,7 @@ public class Tuple2<A, B> {
 	    else {
 	      @SuppressWarnings("rawtypes")
 	      Tuple2 that = (Tuple2) o;
-	      return _1.equals(that._1) && _2.equals(that._2);
+	      return a1.equals(that.a1) && a2.equals(that.a2);
 	    }
 	}
 	  
@@ -32,8 +32,8 @@ public class Tuple2<A, B> {
 	public int hashCode() {
 	    final int prime = 31;
 	    int result = 1;
-	    result = prime * result + _1.hashCode();
-	    result = prime * result + _2.hashCode();
+	    result = prime * result + a1.hashCode();
+	    result = prime * result + a2.hashCode();
 	    return result;
 	}
 }
